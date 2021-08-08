@@ -9,7 +9,7 @@ body {
 .forms {
     position: absolute;
     left: 580px;
-    top: 250px;
+    top: 320px;
 
     font-size: 18px;
     border-width: 5px;
@@ -20,4 +20,14 @@ body {
 
 .labels {
     margin-right: 6px;
+}
+
+.image {
+    position: absolute;
+    left: 625px;
+    top: 90px;
+    
+
+    width: 280px;
+    height: 200px;
 }
