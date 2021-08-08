@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: #cb997e;
+}
+
+.forms {
+    position: absolute;
+    left: 580px;
+    top: 250px;
+
+    font-size: 18px;
+    border-width: 5px;
+    border-style: inset;
+    border-color: #6b705c;
+    padding: 30px;
+}
+
+.labels {
+    margin-right: 6px;
+}
