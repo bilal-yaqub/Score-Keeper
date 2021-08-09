@@ -6,7 +6,7 @@ body {
     background-color: #cb997e;
 }
 
-.gameSelection {
+#gameSelection {
     position: absolute;
     left: 580px;
     top: 320px;
@@ -20,8 +20,8 @@ body {
 
 #footballForm {
     position: absolute;
-    left: 610px;
-    top: 420px;
+    left: 630px;
+    top: 320px;
 
     font-size: 18px;
 
@@ -31,7 +31,7 @@ body {
 #tableTennisForm {
     position: absolute;
     left: 610px;
-    top: 420px;
+    top: 320px;
 
     font-size: 18px;
 
