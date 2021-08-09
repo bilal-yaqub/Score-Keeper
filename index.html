@@ -13,7 +13,7 @@
 <body>
     <h1>Score Keeper</h1>
 
-    <form action="/someDatabase" class="forms">
+    <form class="gameSelection">
         <label for="Game" class="labels">Game</label>
         <select name="Game" id="gameSelection">
             <option>Please Choose a Game</option>
@@ -23,6 +23,29 @@
 
         <button>Continue</button>
     </form>
+
+    <form id="footballForm">
+        <label for="one">First to 1</label>
+        <input type="radio" id="one" name="firstTo" value="one">
+
+        <label for="three">First to 3</label>
+        <input type="radio" id="three" name="firstTo" value="three">
+
+        <label for="five">First to 5</label>
+        <input type="radio" id="five" name="firstTo" value="five">
+    </form>
+
+    <form id="tableTennisForm">
+        <label for="five">First to 5</label>
+        <input type="radio" id="five" name="firstTo" value="five">
+
+        <label for="ten">First to 10</label>
+        <input type="radio" id="ten" name="firstTo" value="ten">
+
+        <label for="twenty">First to 20</label>
+        <input type="radio" id="twenty" name="firstTo" value="twenty">
+    </form>
+
     <script src="app.js"></script>
 </body>
 

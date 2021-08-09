@@ -6,7 +6,7 @@ body {
     background-color: #cb997e;
 }
 
-.forms {
+.gameSelection {
     position: absolute;
     left: 580px;
     top: 320px;
@@ -15,7 +15,27 @@ body {
     border-width: 5px;
     border-style: inset;
     border-color: #6b705c;
-    padding: 30px;
+    padding: 25px;
+}
+
+#footballForm {
+    position: absolute;
+    left: 610px;
+    top: 420px;
+
+    font-size: 18px;
+
+    display: none;
+}
+
+#tableTennisForm {
+    position: absolute;
+    left: 610px;
+    top: 420px;
+
+    font-size: 18px;
+
+    display: none;
 }
 
 .labels {
