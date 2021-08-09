@@ -1,9 +1,16 @@
 let button = document.querySelector('button')
+let playerNames = document.querySelector('#playerNames')
 let selection = document.querySelector('#gameSelection')
 let footballForm = document.querySelector('#footballForm')
+let scoreKeeper = document.querySelector('#scoreKeeper')
 let tableTennisForm = document.querySelector('#tableTennisForm')
 
+console.log(scoreKeeper.children)
+
+
 let firstTo = 0
+let playerOne = ""
+let playerTwo = ""
 let footballSelected = false
 let footballFormSelections = [footballForm.one, footballForm.three, footballForm.five]
 let tableTennisFormSelections = [tableTennisForm.five, tableTennisForm.ten, tableTennisForm.twenty]
@@ -53,6 +60,7 @@ for (let i = 0; i < 3; i++) {
                 break;
         }
         footballForm.style.display = 'none'
+        playerNames.style.display = 'block'
     })
 
     tableTennisOption.addEventListener('change', function () {
@@ -69,5 +77,18 @@ for (let i = 0; i < 3; i++) {
         }
 
         footballForm.style.display = 'none'
+        playerNames.style.display = 'block'
     })
 }
+
+playerNames.addEventListener('submit', function (evt) {
+    evt.preventDefault()
+
+    playerOne = playerNames.player1.value
+    playerTwo = playerNames.player2.value
+
+    scoreKeeper.children[2].innerText = `${playerOne} | +1`
+    scoreKeeper.children[3].innerText = `${playerTwo} | +1`
+
+    playerNames.style.display = 'none'
+})
