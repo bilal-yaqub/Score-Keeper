@@ -3,6 +3,8 @@ let selection = document.querySelector('#gameSelection')
 let footballForm = document.querySelector('#footballForm')
 let tableTennisForm = document.querySelector('#tableTennisForm')
 
+let firstTo = 0
+let footballSelected = false
 let footballFormSelections = [footballForm.one, footballForm.three, footballForm.five]
 let tableTennisFormSelections = [tableTennisForm.five, tableTennisForm.ten, tableTennisForm.twenty]
 
@@ -26,8 +28,10 @@ button.addEventListener('click', function (evt) {
 
     createImage()
 
-    if (selection.gameSelectionChoice.value == 'Football') footballForm.style.display = 'block'
-    else tableTennisForm.style.display = 'block'
+    if (selection.gameSelectionChoice.value == 'Football') {
+        footballSelected = true
+        footballForm.style.display = 'block'
+    } else tableTennisForm.style.display = 'block'
 
     selection.style.display = 'none'
 })
@@ -37,10 +41,33 @@ for (let i = 0; i < 3; i++) {
     let tableTennisOption = tableTennisFormSelections[i]
 
     footballOption.addEventListener('change', function () {
+        switch (i) {
+            case 0:
+                firstTo = 1
+                break;
+            case 1:
+                firstTo = 3
+                break;
+            case 2:
+                firstTo = 5
+                break;
+        }
         footballForm.style.display = 'none'
     })
 
     tableTennisOption.addEventListener('change', function () {
+        switch (i) {
+            case 0:
+                firstTo = 5
+                break;
+            case 1:
+                firstTo = 10
+                break;
+            case 2:
+                firstTo = 15
+                break;
+        }
+
         footballForm.style.display = 'none'
     })
 }
