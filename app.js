@@ -11,6 +11,8 @@ console.log(scoreKeeper.children)
 let firstTo = 0
 let playerOne = ""
 let playerTwo = ""
+let playerOneScore = 0
+let playerTwoScore = 0
 let footballSelected = false
 let footballFormSelections = [footballForm.one, footballForm.three, footballForm.five]
 let tableTennisFormSelections = [tableTennisForm.five, tableTennisForm.ten, tableTennisForm.twenty]
@@ -87,8 +89,38 @@ playerNames.addEventListener('submit', function (evt) {
     playerOne = playerNames.player1.value
     playerTwo = playerNames.player2.value
 
-    scoreKeeper.children[2].innerText = `${playerOne} | +1`
-    scoreKeeper.children[3].innerText = `${playerTwo} | +1`
+    scoreKeeper.children[2].innerText = `${playerOne}  +1`
+    scoreKeeper.children[3].innerText = `${playerTwo}  +1`
 
     playerNames.style.display = 'none'
+})
+
+scoreKeeper.children[2].addEventListener('click', function () {
+    playerOneScore += 1
+    console.log(firstTo)
+    if (playerOneScore >= firstTo) {
+        scoreKeeper.style.display = 'none'
+        let text = document.createElement('p')
+        text.innerText = `${playerOne} wins`
+        document.body.append(text)
+    }
+
+    scoreKeeper.children[0].innerText = `${playerOneScore} : ${playerTwoScore}`
+})
+
+scoreKeeper.children[3].addEventListener('click', function () {
+    playerTwoScore += 1
+    if (playerOneScore >= firstTo) {
+        scoreKeeper.style.display = 'none'
+        let text = document.createElement('p')
+        text.innerText = `${playerOne} wins`
+        document.body.append(text)
+    }
+
+    scoreKeeper.children[0].innerText = `${playerOneScore} : ${playerTwoScore}`
+})
+scoreKeeper.children[4].addEventListener('click', function () {
+    playerOneScore = 0
+    playerTwoScore = 0
+    scoreKeeper.children[0].innerText = `${playerOneScore} : ${playerTwoScore}`
 })
