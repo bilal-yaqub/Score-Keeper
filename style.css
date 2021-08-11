@@ -2,28 +2,34 @@ h1 {
     text-align: center;
 }
 
-body {
-    background-color: #cb997e;
-}
-
-#gameSelection {
+.formPosition {
     position: absolute;
-    left: 580px;
-    top: 320px;
+    left: 620px;
+    top: 120px;
 
     font-size: 18px;
-    border-width: 5px;
-    border-style: inset;
-    border-color: #6b705c;
-    padding: 25px;
+}
+
+select {
+    width: 180px;
+    height: 28px;
+
+    margin-top: 5px;
+    margin-right: 5px;
+
+    border-width: 1px;
+    border-color: black;
+}
+
+#gamePlaying {
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    margin-bottom: 0px;
 }
 
 #footballForm {
-    position: absolute;
-    left: 630px;
-    top: 320px;
 
-    font-size: 18px;
+    font-size: 19px;
 
     display: none;
 }
@@ -31,40 +37,54 @@ body {
 #tableTennisForm {
     position: absolute;
     left: 610px;
-    top: 320px;
+    top: 390px;
 
-    font-size: 18px;
+    font-size: 20px;
 
     display: none;
 }
 
-.labels {
-    margin-right: 6px;
-}
-
-.image {
+#footballImage {
     position: absolute;
-    left: 625px;
-    top: 90px;
-    
-
-    width: 280px;
-    height: 200px;
+    left: 880px;
+    top: 250px;
 }
+
+#tableTennisImage {
+    position: absolute;
+    left: 840px;
+    top: 300px;
+}
+
+
 
 #playerNames {
-    position: absolute;
-    left: 570px;
-    top: 320px;
-
+    font-size: 19px;
     display: none;
+}
+
+#player1 {
+    display: block;
+    width: 250px;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+}
+
+#player2 {
+    width: 190px;
+    font-size: 20px;
+
+    padding-bottom: 5px;
 }
 
 #scoreKeeper {
     /* display: none; */
     position: absolute;
-    left: 620px;
-    top: 480px;
+    left: 580px;
+    top: 260px;
+
+    display: none;
     
 }
 
@@ -77,4 +97,11 @@ body {
 .playerBtn {
     width: 110px;
     height: 80px;
+}
+
+#playerNameBtn {
+    width: 70px;
+    height: 30px;
+
+    margin-bottom: 10px;
 }

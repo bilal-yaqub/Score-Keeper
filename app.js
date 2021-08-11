@@ -17,16 +17,21 @@ let footballSelected = false
 let footballFormSelections = [footballForm.one, footballForm.three, footballForm.five]
 let tableTennisFormSelections = [tableTennisForm.five, tableTennisForm.ten, tableTennisForm.twenty]
 
-let tableTennisImage = 'http://pngimg.com/uploads/ping_pong/ping_pong_PNG102675.png'
-let footballImage = 'https://lh3.googleusercontent.com/proxy/gKokMvyPADQXk45bBdC46k6seUvnCj5y2xAFqDzPsJaRnRmAaU8-8nicgWfd0hUBlz4VxitxGZ5cjK8TlHLN_ciJNU4teBoj_vnZC9CFR0zeVrdOrdQkmA'
+let tableTennisImage = 'https://cdn.pixabay.com/photo/2014/04/02/17/00/ping-pong-307629_960_720.png'
+let footballImage = 'https://clipart-best.com/img/football/football-clip-art-12.png'
 
 function createImage() {
     if (selection.gameSelectionChoice.value != 'Please Choose a Game') {
         let image = document.createElement('img')
-        image.classList.add('image')
 
-        if (selection.gameSelectionChoice.value == 'Football') image.src = footballImage
-        else image.src = tableTennisImage
+
+        if (selection.gameSelectionChoice.value == 'Football') {
+            image.src = footballImage
+            image.id = 'footballImage'
+        } else {
+            image.src = tableTennisImage
+            image.id = 'tableTennisImage'
+        }
 
         document.body.append(image)
     }
@@ -78,7 +83,7 @@ for (let i = 0; i < 3; i++) {
                 break;
         }
 
-        footballForm.style.display = 'none'
+        tableTennisForm.style.display = 'none'
         playerNames.style.display = 'block'
     })
 }
@@ -92,7 +97,10 @@ playerNames.addEventListener('submit', function (evt) {
     scoreKeeper.children[2].innerText = `${playerOne}  +1`
     scoreKeeper.children[3].innerText = `${playerTwo}  +1`
 
+
     playerNames.style.display = 'none'
+    scoreKeeper.style.display = 'block'
+
 })
 
 scoreKeeper.children[2].addEventListener('click', function () {
