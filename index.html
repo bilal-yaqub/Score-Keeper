@@ -24,7 +24,10 @@
 
 
     <form id="footballForm" class="formPosition">
-        <div id="gamePlaying"> Football Score Counter </div>
+        <div id="previousInfo">
+            <span id="gamePlaying">Football Score Counter</span>
+        </div>
+
         <p style="margin-bottom: 5px;">Choose what score you are playing to:</p>
         <label for="one">First to 1</label>
         <input type="radio" id="one" name="firstTo" value="one">
@@ -38,19 +41,26 @@
         <input type="radio" id="five" name="firstTo" value="five">
     </form>
 
-    <form id="tableTennisForm">
+    <form id="tableTennisForm" class="formPosition">
+        <div id="previousInfo">
+            <span id="gamePlaying">Table Tennis Score Counter</span>
+        </div>
+
+        <p style="margin-bottom: 5px;">Choose what score you are playing to:</p>
         <label for="five">First to 5</label>
         <input type="radio" id="five" name="firstTo" value="five">
 
-        <label for="ten">First to 10</label>
-        <input type="radio" id="ten" name="firstTo" value="ten">
+        <div style="display: block;">
+            <label for="ten">First to 10</label>
+            <input type="radio" id="ten" name="firstTo" value="ten">
+        </div>
 
         <label for="twenty">First to 20</label>
         <input type="radio" id="twenty" name="firstTo" value="twenty">
     </form>
 
     <form id="playerNames" class="formPosition">
-        <div id="gamePlaying">
+        <div id="previousInfo">
             Football Score Counter <br> <span style="font-size: 20px;">Playing to Five</span>
         </div>
         <p style="margin-bottom: 5px;">Please Enter the Names: </p>
@@ -60,12 +70,17 @@
         <button id="playerNameBtn">Submit</button>
     </form>
 
-    <div id="scoreKeeper">
-        <p>0 : 0</p>
+    <div id="scoreKeeper" class="formPosition">
+        <div id="previousInfo">
+            Football Score Counter <br> <span style="font-size: 20px;">Playing to Five</span> <br> <span id="playerOneName"
+                style="font-size: 10px;">playerOne</span> <br> vs <br> <span id="playerTwoName">playerTwo</span>
+        </div>
+
+        <p id="showScore" style="margin-top: 3px;">0 : 0</p>
         <p style="font-size:15px;">Use the buttons below to keep score</p>
-        <button class="playerBtn" style="background-color: #6E85B2;">+1 Player 1</button>
-        <button class="playerBtn" style="background-color: #FF2626;">+1 Player 2</button>
-        <button class="playerBtn" style="background-color: #368B85;">Reset</button>
+        <button id="playerOneBtn" class="playerBtn" style="background-color: #6E85B2;">+1 Player 1</button>
+        <button id="playerTwoBtn" class="playerBtn" style="background-color: #FF2626;">+1 Player 2</button>
+        <button id="resetBtn" class="playerBtn" style="background-color: #368B85;">Reset</button>
     </div>
 
     <script src="app.js"></script>
