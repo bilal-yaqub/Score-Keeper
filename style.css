@@ -4,17 +4,19 @@ h1 {
 
 .formPosition {
     position: absolute;
-    left: 620px;
+    left: 250px;
     top: 100px;
 
     font-size: 18px;
+    padding: 50px;
+    border: 2px inset black;
 }
 
 select {
-    width: 180px;
+    width: 200px;
     height: 28px;
 
-    margin-top: 5px;
+    margin-top: 6px;
     margin-right: 5px;
 
     border-width: 1px;
@@ -22,9 +24,9 @@ select {
 }
 
 #previousInfo {
-    font-size: 25px;
+    font-size: 35px;
     border-bottom: 2px solid black;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 #footballForm {
@@ -40,20 +42,17 @@ select {
 
 #footballImage {
     position: absolute;
-    left: 880px;
-    top: 250px;
+    left: 850px;
+    top: 230px;
 }
 
 #tableTennisImage {
     position: absolute;
-    left: 840px;
-    top: 300px;
+    left: 850px;
+    top: 260px;
 }
 
-
-
 #playerNames {
-    font-size: 19px;
     display: none;
 }
 
@@ -62,14 +61,12 @@ select {
     width: 250px;
     margin-bottom: 5px;
 
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #player2 {
-    width: 190px;
-    font-size: 20px;
-
-    padding-bottom: 5px;
+    width: 175px;
+    font-size: 15px;
 }
 
 #scoreKeeper {
@@ -92,7 +89,7 @@ select {
 
 #playerNameBtn {
     width: 70px;
-    height: 30px;
+    height: 24px;
 
-    margin-bottom: 10px;
+    
 }

@@ -61,7 +61,7 @@
 
     <form id="playerNames" class="formPosition">
         <div id="previousInfo">
-            Football Score Counter <br> <span style="font-size: 20px;">Playing to Five</span>
+            Football Score Counter <br> <span id="playingToOne" style="font-size: 25px;"></span>
         </div>
         <p style="margin-bottom: 5px;">Please Enter the Names: </p>
         <input type="text" id="player1" name="playerOne" placeholder="Player 1">
@@ -72,11 +72,12 @@
 
     <div id="scoreKeeper" class="formPosition">
         <div id="previousInfo">
-            Football Score Counter <br> <span style="font-size: 20px;">Playing to Five</span> <br> <span id="playerOneName"
-                style="font-size: 10px;">playerOne</span> <br> vs <br> <span id="playerTwoName">playerTwo</span>
+            Football Score Counter <br> <span id="playingToTwo" style="font-size: 25px;">Playing To</span> <br> <span id="playerOneName"
+                style="font-size: 20px; margin-bottom: 1px;">playerOne</span> <br> <span style="font-size: 15px; margin: 0px;">vs</span> <br> <span
+                id="playerTwoName" style="font-size: 20px; margin-top: 0px;">playerTwo</span>
         </div>
 
-        <p id="showScore" style="margin-top: 3px;">0 : 0</p>
+        <p id="showScore" style="margin-top: 20px;">0 : 0</p>
         <p style="font-size:15px;">Use the buttons below to keep score</p>
         <button id="playerOneBtn" class="playerBtn" style="background-color: #6E85B2;">+1 Player 1</button>
         <button id="playerTwoBtn" class="playerBtn" style="background-color: #FF2626;">+1 Player 2</button>

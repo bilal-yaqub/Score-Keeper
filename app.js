@@ -1,11 +1,14 @@
 let button = document.querySelector('button')
+let playingToOne = document.querySelector('#playingToOne')
+let playingToTwo = document.querySelector('#playingToTwo')
+let scoreKeeper = document.querySelector('#scoreKeeper')
 let playerNames = document.querySelector('#playerNames')
 let selection = document.querySelector('#gameSelection')
 let footballForm = document.querySelector('#footballForm')
-let scoreKeeper = document.querySelector('#scoreKeeper')
-let tableTennisForm = document.querySelector('#tableTennisForm')
 let playerOneName = document.querySelector('#playerOneName')
 let playerTwoName = document.querySelector('#playerTwoName')
+let tableTennisForm = document.querySelector('#tableTennisForm')
+
 
 console.log(scoreKeeper.children)
 
@@ -67,6 +70,9 @@ for (let i = 0; i < 3; i++) {
                 firstTo = 5
                 break;
         }
+
+        playingToOne.innerText = `Playing to ${firstTo}`
+        playingToTwo.innerText = `Playing to ${firstTo}`
         footballForm.style.display = 'none'
         playerNames.style.display = 'block'
     })
@@ -84,6 +90,8 @@ for (let i = 0; i < 3; i++) {
                 break;
         }
 
+        playingToOne.innerText = `Playing to ${firstTo}`
+        playingToTwo.innerText = `Playing to ${firstTo}`
         tableTennisForm.style.display = 'none'
         playerNames.style.display = 'block'
     })
@@ -114,7 +122,8 @@ scoreKeeper.children.playerOneBtn.addEventListener('click', function () {
     if (playerOneScore >= firstTo) {
         scoreKeeper.style.display = 'none'
         let text = document.createElement('p')
-        text.innerText = `${playerOne} wins`
+        text.classList.add('formPosition')
+        text.innerText = `${playerOne} Wins!`
         document.body.append(text)
     }
 
@@ -123,10 +132,11 @@ scoreKeeper.children.playerOneBtn.addEventListener('click', function () {
 
 scoreKeeper.children.playerTwoBtn.addEventListener('click', function () {
     playerTwoScore += 1
-    if (playerOneScore >= firstTo) {
+    if (playerTwoScore >= firstTo) {
         scoreKeeper.style.display = 'none'
         let text = document.createElement('p')
-        text.innerText = `${playerOne} wins`
+        text.classList.add('formPosition')
+        text.innerText = `${playerTwo} Wins!`
         document.body.append(text)
     }
 
